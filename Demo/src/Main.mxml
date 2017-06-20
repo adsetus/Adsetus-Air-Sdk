@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+
+    <fx:Script>
+        <![CDATA[
+        import us.adset.sdk.plugin.air.Adsetus;
+
+        Adsetus.init("YOUR_APP_ID");
+
+        public function button1_clickHandler(event:MouseEvent):void {
+            Adsetus.showAd();
+        }
+        ]]>
+    </fx:Script>
+
+    <s:VGroup id="mainGroup" horizontalAlign="center" verticalAlign="middle" width="100%" height="100%" >
+        <s:Button label="Show an Ad" click="button1_clickHandler(event)"/>
+    </s:VGroup>
+
+</s:Application>
