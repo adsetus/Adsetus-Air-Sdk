@@ -8,7 +8,9 @@
         Adsetus.init("YOUR_APP_ID");
 
         public function button1_clickHandler(event:MouseEvent):void {
-            Adsetus.showAd();
+            if (Adsetus.isAdLoaded()) {
+                Adsetus.showAd();
+            }
         }
         ]]>
     </fx:Script>
